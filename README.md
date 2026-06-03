@@ -2,7 +2,7 @@
 
 ##  Informações do Projeto e Autoria
 * **Curso:** Bacharelado em Ciência da Computação (FIAP)
-* **Turma:** 1CC
+* **Turma:** 1CCPJ
 * **Desafio:** Análise Estatística Aplicada à Nova Economia Espacial
 
 ###  Integrantes do Grupo
