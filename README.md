@@ -1,4 +1,4 @@
-### Global Solution - Modelagem Linear para Aprendizagem de Máquina
+## Global Solution - Modelagem Linear para Aprendizagem de Máquina
 
 ##  Informações do Projeto e Autoria
 * **Curso:** Bacharelado em Ciência da Computação (FIAP)
