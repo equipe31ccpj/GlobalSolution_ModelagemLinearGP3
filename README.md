@@ -1,75 +1,254 @@
-## Global Solution - Modelagem Linear para Aprendizagem de Máquina
+#  Global Solution – Modelagem Linear para Aprendizagem de Máquina
 
-##  Informações do Projeto e Autoria
-* **Curso:** Bacharelado em Ciência da Computação (FIAP)
-* **Turma:** 1CCPJ
-* **Desafio:** Análise Estatística Aplicada à Nova Economia Espacial
+##  Informações do Projeto
 
-###  Integrantes do Grupo
-* **[Maria Eduarda Rocha Benjamim]** - RM: `[570554]`
-* **[Pedro Henrique Neves]** - RM: `[571382]`
-* **[Akin Alexandre Mendes Martins]** - RM: `[572773]`
+**Instituição:** FIAP – Faculdade de Informática e Administração Paulista  
+**Curso:** Bacharelado em Ciência da Computação  
+**Turma:** 1CCPJ  
+**Disciplina:** Modelagem Linear para Aprendizagem de Máquina  
+**Desafio:** Análise Estatística Aplicada à Nova Economia Espacial
 
----
+###  Integrantes
 
-##  01) Seleção e Justificativa da Base de Dados
-
-###  Origem do Dataset
-* **Nome Original:** All Space Missions from 1957
-* **Arquivo Utilizado:** `Space_Corrected.csv`
-* **Fonte:** [Kaggle - Space Missions Dataset](https://kaggle.com)
-
-###  Justificativa Técnica
-A transição dos monopólios estatais para a **Nova Economia Espacial** exige decisões corporativas baseadas em alta previsibilidade orçamentária e sustentabilidade operacional. Esta base reúne dados reais de transações aeroespaciais globais desde o início da exploração orbital. 
-
-A escolha do arquivo `Space_Corrected.csv` justifica-se pelo seu potencial analítico rigoroso. Ele apresenta variáveis categóricas para governança operacional (`Company Name`, `Status Mission`) associadas a dimensões métricas financeiras (` Rocket`). O tratamento dos dados permitiu isolar o vetor cronológico (`Datum`) para anos inteiros e limpar strings financeiras complexas, viabilizando uma análise exploratória robusta e fiel ao mercado global real.
+- Maria Eduarda Rocha Benjamim – RM 570554
+- Pedro Henrique Neves – RM 571382
+- Akin Alexandre Mendes Martins – RM 572773
 
 ---
 
-##  Estrutura Arquitetural do Repositório
+#  Objetivo do Projeto
+
+Este projeto tem como finalidade aplicar técnicas de Estatística Descritiva, Distribuição de Frequências e Análise Exploratória de Dados para investigar padrões presentes no mercado aeroespacial mundial.
+
+A análise foi desenvolvida a partir de dados históricos de missões espaciais, permitindo identificar tendências de crescimento do setor, comportamento dos custos operacionais e possíveis oportunidades associadas à chamada **Nova Economia Espacial (New Space Economy)**.
+
+---
+
+#  Base de Dados
+
+## Origem
+
+**Dataset:** All Space Missions from 1957  
+**Arquivo Utilizado:** `Space_Corrected.csv`
+
+**Fonte:** Kaggle – Space Missions Dataset
+
+## Justificativa da Escolha
+
+O conjunto de dados reúne informações reais sobre lançamentos espaciais realizados por governos e empresas privadas desde o início da exploração espacial moderna.
+
+Sua utilização possibilita:
+
+- Estudar a evolução histórica da atividade espacial;
+- Analisar custos de missões ao longo do tempo;
+- Identificar padrões de investimento;
+- Aplicar técnicas estatísticas em dados reais de mercado.
+
+Além disso, a base contém variáveis quantitativas e categóricas adequadas para análises exploratórias e modelagem estatística.
+
+---
+
+# Estrutura do Repositório
 
 ```text
-├── README.md               # Documentação técnica e guia do projeto (este arquivo)
-├── Space_Corrected.csv     # Base de dados real extraída do Kaggle
-├── global_solution.ipynb   # Código-fonte Python executável com análises e gráficos
-└── relatorio_final.pdf     # Relatório estatístico final formatado para o cliente
+├── README.md
+├── Space_Corrected.csv
+├── global_solution.ipynb
+├── relatorio_final.pdf
 ```
 
----
+## Descrição dos Arquivos
 
-##  Arquitetura de Software e Metodologia Científica
-
-O ecossistema computacional foi construído inteiramente em **Python 3** utilizando o ambiente do **Google Colab**. O script foi projetado sob os seguintes pilares de engenharia de dados:
-
-1. **Tratamento e Engenharia de Atributos:** Limpeza de strings monetárias, remoção de caracteres e conversão do vetor de custos para ponto flutuante (`float`). Extração e conversão de séries temporais para anos discretos (`int`).
-2. **Plano de Amostragem Estruturada:** Extração de uma amostra probabilística aleatória e estrita de **100 elementos** para neutralizar vieses temporais, isolando os dados em `variavel_discreta` e `variavel_continua` conforme metodologia proprietária do grupo.
-3. **Modelagem de Frequências (TDF):** Construção automatizada de tabelas de distribuição contínua e discreta, mensurando frequências absolutas (`fi`), acumuladas (`fi_acumulada`) e relativas percentuais (`fr%`).
-4. **Visualização Avançada com Seaborn:** Geração de gráficos estatísticos integrando o ecossistema Seaborn e Matplotlib, aplicando temas corporativos (`whitegrid`), eixos nomeados e curvas de densidade Kernel (KDE).
-5. **Diagnóstico Univariado:** Processamento exato das medidas de tendência central, dispersão e separatrizes (quartis) sobre o vetor de custos.
+| Arquivo | Descrição |
+|----------|------------|
+| README.md | Documentação do projeto |
+| Space_Corrected.csv | Base de dados utilizada |
+| global_solution.ipynb | Notebook contendo o código-fonte da análise |
+| relatorio_final.pdf | Relatório estatístico final |
 
 ---
 
-##  Resumo Executivo de Insights Estatísticos
+#  Metodologia
 
-* **Eficiência Orçamentária:** Mais de 50% dos lançamentos comerciais recentes se concentram na faixa inicial de custos (sub-100M). Isso comprova que a reutilização de componentes aeroespaciais reduziu drasticamente as barreiras econômicas de entrada para empresas privadas.
-* **Assimetria Positiva:** A média de custo substancialmente maior que a mediana aponta para um mercado assimétrico à direita, puxado por raros megaprojetos governamentais em meio a uma massa de lançamentos de microssatélites ágeis de baixo orçamento.
-* **Zona de Previsibilidade:** O mapeamento dos quartis indica que 75% de todo o mercado opera abaixo de USD 130 milhões, delimitando o teto orçamentário ideal para novos fundos de Venture Capital.
+O projeto foi desenvolvido em Python utilizando o ambiente Google Colab.
+
+## 1. Tratamento dos Dados
+
+Foram realizadas as seguintes etapas:
+
+- Importação da base de dados;
+- Limpeza de valores ausentes;
+- Conversão dos custos das missões para formato numérico;
+- Extração do ano de lançamento da variável temporal;
+- Padronização dos dados para análise estatística.
+
+## 2. Construção das Variáveis
+
+### Variável Quantitativa Discreta
+
+**Ano de Lançamento**
+
+Utilizada para analisar a evolução histórica das missões espaciais.
+
+### Variável Quantitativa Contínua
+
+**Custo da Missão (USD Milhões)**
+
+Utilizada para avaliar a distribuição dos investimentos no setor espacial.
 
 ---
 
-##  Como Executar o Projeto
+## 3. Tabelas de Distribuição de Frequência
 
-1. Faça o clone deste repositório para sua máquina local ou baixe os arquivos.
-2. Acesse o [Google Colab](https://google.com).
-3. Faça o upload do arquivo `global_solution.ipynb`.
-4. No menu lateral esquerdo do Colab (ícone de pasta), faça o upload do arquivo `Space_Corrected.csv`.
-5. Vá no menu superior do Colab e clique em **Ambiente de execução** -> **Executar tudo**.
+Foram construídas tabelas contendo:
+
+- Frequência Absoluta (fi)
+- Frequência Acumulada (Fi)
+- Frequência Relativa (%)
+
+para ambas as variáveis analisadas.
 
 ---
 
-##  Tecnologias de Código Utilizadas
-* **Python 3**
-* **Pandas:** Estruturação de DataFrames, tratamento de strings e cálculo das métricas.
-* **NumPy:** Vetorização estatística.
-* **Seaborn & Matplotlib:** Engenharia de eixos gráficos e renderização visual corporativa.
+## 4. Estatística Descritiva
 
+Foram calculadas as seguintes medidas:
+
+### Medidas de Tendência Central
+
+- Média
+- Mediana
+- Moda
+
+### Medidas de Dispersão
+
+- Variância
+- Desvio Padrão
+- Amplitude
+
+### Medidas Separatrizes
+
+- Quartil 1 (Q1)
+- Quartil 2 (Q2)
+- Quartil 3 (Q3)
+
+---
+
+## 5. Visualização de Dados
+
+Foram produzidos gráficos utilizando Matplotlib e Seaborn:
+
+### Gráfico Temporal
+
+Evolução do número de lançamentos ao longo dos anos.
+
+### Histograma com KDE
+
+Distribuição dos custos das missões espaciais.
+
+---
+
+#  Principais Resultados
+
+## Crescimento da Atividade Espacial
+
+Os dados mostram um aumento significativo da quantidade de lançamentos nas décadas mais recentes, evidenciando a expansão do setor espacial comercial.
+
+## Concentração de Custos
+
+A maior parte das missões encontra-se nas faixas de menor custo, indicando redução das barreiras financeiras para entrada de novas empresas.
+
+## Assimetria Positiva
+
+A distribuição dos custos apresenta cauda à direita, caracterizando a existência de poucos projetos extremamente caros em comparação à maioria das missões.
+
+## Faixa Predominante de Operação
+
+Os quartis mostram que grande parte das missões está concentrada em níveis intermediários e baixos de investimento, reforçando a tendência de operações mais enxutas e escaláveis.
+
+---
+
+#  Conclusões
+
+A análise estatística permitiu compreender melhor o comportamento econômico do setor espacial contemporâneo.
+
+Os resultados evidenciam:
+
+- Crescimento consistente da atividade espacial;
+- Popularização de missões de menor custo;
+- Forte influência da iniciativa privada no mercado;
+- Necessidade de utilização de métricas robustas para modelagem preditiva devido à assimetria dos dados.
+
+Esses achados reforçam a importância da Estatística e da Ciência de Dados como ferramentas estratégicas para tomada de decisão em mercados altamente tecnológicos.
+
+---
+
+#  Tecnologias Utilizadas
+
+- Python 3
+- Google Colab
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+
+---
+
+#  Como Executar
+
+## 1. Clone ou baixe o projeto
+
+```bash
+git clone <url-do-repositorio>
+```
+
+## 2. Abra o Google Colab
+
+Acesse:
+
+https://colab.research.google.com
+
+## 3. Faça upload dos arquivos
+
+- `global_solution.ipynb`
+- `Space_Corrected.csv`
+
+## 4. Execute o notebook
+
+No menu superior:
+
+```text
+Ambiente de Execução → Executar Tudo
+```
+
+## 5. Visualize os resultados
+
+O notebook irá gerar automaticamente:
+
+- Tabelas de frequência;
+- Estatísticas descritivas;
+- Gráficos exploratórios;
+- Insights para análise da Nova Economia Espacial.
+
+---
+
+#  Referências
+
+- Kaggle – All Space Missions from 1957 Dataset
+- Pandas Documentation
+- NumPy Documentation
+- Matplotlib Documentation
+- Seaborn Documentation
+
+---
+
+##  Licença
+
+Projeto desenvolvido para fins acadêmicos na disciplina de Modelagem Linear para Aprendizagem de Máquina da FIAP.
+
+Ferramentas de Inteligência Artificial foram utilizadas como apoio na organização, revisão e documentação deste projeto. Toda a implementação, análise dos dados e interpretação dos resultados foram realizadas e validadas pelos integrantes do grupo, que assumem total responsabilidade pelo trabalho apresentado.
+O uso da IA teve caráter exclusivamente auxiliar, respeitando as diretrizes da FIAP para utilização responsável de tecnologias de apoio à aprendizagem.
+---
+
+**FIAP – Bacharelado em Ciência da Computação**  
+**Global Solution 2026/1 – Modelagem Linear para Aprendizagem de Máquina**
