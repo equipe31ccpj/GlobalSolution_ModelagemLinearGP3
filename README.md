@@ -246,9 +246,10 @@ O notebook irá gerar automaticamente:
 
 Projeto desenvolvido para fins acadêmicos na disciplina de Modelagem Linear para Aprendizagem de Máquina da FIAP.
 
-Ferramentas de Inteligência Artificial foram utilizadas como apoio na organização, revisão e documentação deste projeto. Toda a implementação, análise dos dados e interpretação dos resultados foram realizadas e validadas pelos integrantes do grupo, que assumem total responsabilidade pelo trabalho apresentado.
-O uso da IA teve caráter exclusivamente auxiliar, respeitando as diretrizes da FIAP para utilização responsável de tecnologias de apoio à aprendizagem.
 ---
 
 **FIAP – Bacharelado em Ciência da Computação**  
 **Global Solution 2026/1 – Modelagem Linear para Aprendizagem de Máquina**
+
+OBSERVAÇÃO : Ferramentas de Inteligência Artificial foram utilizadas como apoio na organização, revisão e documentação deste projeto. Toda a implementação, análise dos dados e interpretação dos resultados foram realizadas e validadas pelos integrantes do grupo, que assumem total responsabilidade pelo trabalho apresentado.
+O uso da IA teve caráter exclusivamente auxiliar, respeitando as diretrizes da FIAP para utilização responsável de tecnologias de apoio à aprendizagem.
