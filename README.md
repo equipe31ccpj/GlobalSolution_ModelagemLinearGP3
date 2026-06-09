@@ -12,7 +12,7 @@
 
 - Maria Eduarda Rocha Benjamim – RM 570554
 - Pedro Henrique Neves – RM 571382
-- Akin Alexandre Mendes Martins – RM 572773
+- Akin Alexandre Mendes Martins – RM 572553
 
 ---
 
